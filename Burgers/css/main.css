@@ -1,0 +1,552 @@
+@import url("../css/normalize.css");
+@import url("../bloks/layout.scss");
+@import url("../bloks/scroll.scss");
+@font-face {
+  font-family: 'gagalinregular';
+  src: url("../fonts/gagalin-regular-webfont.woff2") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'lifehackmedium';
+  src: url("../fonts/lifehack_medium-webfont.woff") format("woff2"), url("../fonts/gagalin-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ubuntubold';
+  src: url("../fonts/ubuntu-b-webfont.woff2") format("woff2"), url("../fonts/ubuntu-b-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ubuntulight';
+  src: url("../fonts/ubuntu-light-webfont.woff2") format("woff2"), url("../fonts/ubuntu-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ubuntumedium';
+  src: url("../fonts/ubuntu-medium-webfont.woff2") format("woff2"), url("../fonts/ubuntu-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'ubunturegular';
+  src: url("../fonts/ubuntu-regular-webfont.woff2") format("woff2"), url("../fonts/ubuntu-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.html, body {
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+  height: 100%; }
+
+.body {
+  margin-left: 0;
+  margin-top: 0;
+  position: relative;
+  font-family: 'ubuntulight', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.42;
+  color: #2f3234;
+  -webkit-font-smoothing: antialiased; }
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  min-width: 960px;
+  height: 100%; }
+
+.main-content {
+  height: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.section {
+  height: 100vh;
+  min-height: 650px; }
+
+.first-page {
+  background: url("../img/video-bg.png");
+  background-size: cover;
+  position: relative; }
+
+.container {
+  position: static;
+  margin: 0 auto;
+  min-width: 940px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.header {
+  padding-top: 12px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.header-container {
+  position: static;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 940px;
+  margin: 0 auto; }
+
+.header__logo {
+  padding-top: 12px;
+  display: block;
+  position: relative;
+  float: left;
+  width: 20%;
+  margin-top: 12px; }
+
+.header__menu {
+  padding-top: 17px;
+  position: relative;
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.nav {
+  display: inline-block;
+  vertical-align: middle; }
+
+.nav__list {
+  list-style: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.nav__list__item:last-child.item__link:after {
+  display: none; }
+
+.item__link {
+  color: #fff;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: 'ubunturegular'; }
+  .item__link:after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 15px; }
+  .item__link:hover {
+    text-decoration: underline; }
+
+.btn__order {
+  width: 15%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 9px 0;
+  margin-left: 1%;
+  font-family: 'ubunturegular';
+  background: #e45028;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px; }
+  .btn__order:hover {
+    background: #c1401e; }
+
+.first-page-container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0.7;
+  -ms-flex: 0.7;
+  flex: 0.7;
+  padding-left: 145px; }
+
+.first-page-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.first-page-left {
+  width: 50%; }
+
+.drops {
+  position: absolute;
+  left: 119px;
+  top: 200px; }
+
+.first-page-right {
+  width: 50%;
+  padding-top: 115px; }
+  .first-page-right .first-page-title {
+    color: #f9b43b;
+    font-size: 72px;
+    font-family: 'gagalinregular';
+    margin-bottom: 12px; }
+  .first-page-right .first-page-desc {
+    font-size: 65px;
+    color: #fff;
+    font-family: 'lifehackmedium';
+    text-transform: lowercase;
+    line-height: 1em; }
+
+.scroll {
+  position: absolute;
+  display: block;
+  left: 50%;
+  height: 30px;
+  width: 30px;
+  margin-left: -28px;
+  top: 92%;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
+  .scroll:hover {
+    -webkit-transform: scale(1.5, 1.5) translateY(-10px);
+    -ms-transform: scale(1.5, 1.5) translateY(-10px);
+    transform: scale(1.5, 1.5) translateY(-10px); }
+
+.scroll {
+  position: absolute;
+  display: block;
+  left: 50%;
+  height: 30px;
+  width: 30px;
+  margin-left: -28px;
+  top: 92%;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s; }
+  .scroll:hover {
+    -webkit-transform: scale(1.5, 1.5) translateY(-10px);
+    -ms-transform: scale(1.5, 1.5) translateY(-10px);
+    transform: scale(1.5, 1.5) translateY(-10px); }
+
+.line-menu {
+  position: absolute;
+  right: 55px;
+  top: 90px;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.line-menu-link {
+  padding: 10px;
+  width: 4px;
+  height: 4px;
+  display: block;
+  position: relative; }
+  .line-menu-link:hover:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: none;
+    border: 1px solid white;
+    margin-top: -4px;
+    display: inline-block;
+    border-radius: 50%; }
+  .line-menu-link:after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    top: 11px;
+    border-radius: 10px;
+    margin-left: 6px; }
+
+.line-menu {
+  position: absolute;
+  right: 55px;
+  top: 90px;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.line-menu-link {
+  padding: 10px;
+  width: 4px;
+  height: 4px;
+  display: block;
+  position: relative; }
+  .line-menu-link:hover:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: none;
+    border: 1px solid white;
+    margin-top: -4px;
+    display: inline-block;
+    border-radius: 50%; }
+  .line-menu-link:after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    top: 11px;
+    border-radius: 10px;
+    margin-left: 6px; }
+
+.thebest {
+  background: url(../img/bg.svg);
+  background-size: cover;
+  position: relative; }
+
+.thebest__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.thebest__item {
+  text-align: center;
+  vertical-align: top;
+  width: 33.3%;
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.thebest-title {
+  font-size: 72px;
+  font-family: 'gagalinregular';
+  color: #2f3234;
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 155px;
+  margin-bottom: 80px; }
+
+.thebest-icon {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 15px; }
+
+.thebest-icon {
+  background: url(../img/meat.svg);
+  background-size: cover;
+  width: 97px;
+  height: 89px; }
+
+.thebest-icon-two {
+  background: url(../img/hand.svg);
+  background-size: cover;
+  width: 73px;
+  height: 85px; }
+
+.thebest-icon-three {
+  background: url(../img/natural.svg);
+  background-size: cover;
+  width: 88px;
+  height: 75px; }
+
+.thebest-title-text {
+  font-size: 24px;
+  font-family: 'lifehackmedium';
+  color: #2f3234;
+  margin-bottom: 15px; }
+
+.thebest-text {
+  font-size: 14px;
+  line-height: 1.8;
+  opacity: 0.8;
+  color: #2f3234;
+  font-family: Ubuntu;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24.07px; }
+
+.burgers {
+  background: -webkit-gradient(linear, left top, left bottom, from(#f9b43b), color-stop(45%, #eb8d38), color-stop(55%, #eb8d38), to(#f9b43b));
+  background: -webkit-linear-gradient(top, #f9b43b 0%, #eb8d38 45%, #eb8d38 55%, #f9b43b 100%);
+  background: -o-linear-gradient(top, #f9b43b 0%, #eb8d38 45%, #eb8d38 55%, #f9b43b 100%);
+  background: linear-gradient(to bottom, #f9b43b 0%, #eb8d38 45%, #eb8d38 55%, #f9b43b 100%);
+  background-size: cover;
+  position: relative; }
+
+.team {
+  background: url(../img/SBS_1255-X2.jpg);
+  background-size: cover;
+  position: relative; }
+
+.menu {
+  background: url(../img/photo-1428660386617-8d277e7deaf2.jpg);
+  background-size: cover;
+  position: relative; }
+
+.reviews__list {
+  height: 100%;
+  margin-left: -40px;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: auto;
+  background: #2f3234; }
+
+.reviews__item {
+  width: 25%;
+  height: 50%;
+  position: relative; }
+  .reviews__item:hover .answer-hover {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+
+.answer {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+.answer-photo {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.answer-photo-img {
+  width: 100%;
+  height: 100%; }
+
+.answer-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  padding: 17% 12% 0; }
+
+.answer-title {
+  color: white;
+  font-family: "gagalinregular", Helvetica, sans-serif;
+  font-size: 14px;
+  margin-bottom: 25px; }
+
+.answer-text {
+  color: white;
+  font-size: 14px;
+  font-family: "ubuntulight", Helvetica, sans-serif;
+  margin-bottom: 20px; }
+
+.answer-button-link {
+  border-radius: 5px;
+  background-color: #2f3234;
+  padding: 8px 12px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "ubuntumedium", Helvetica, sans-serif;
+  font-size: 12px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  cursor: pointer; }
+
+.work {
+  background: url(../img/BG_.jpg);
+  background-size: cover;
+  position: relative; }
+
+.form {
+  background: url(../img/chalkboard_texture_mc2015_by_mattiamc-d8dbnac.jpg);
+  background-size: cover;
+  position: relative; }
+
+.nav-menu {
+  position: fixed;
+  top: 90px;
+  right: 40px; }
+
+.line-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 90px;
+  right: 40px; }
+
+.line-menu-link {
+  padding: 10px;
+  width: 4px;
+  height: 4px;
+  display: block;
+  position: relative; }
+  .line-menu-link:hover:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: none;
+    border: 1px solid white;
+    margin-top: -4px;
+    display: inline-block;
+    border-radius: 50%; }
+  .line-menu-link:after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    top: 11px;
+    border-radius: 10px;
+    margin-left: 6px; }
